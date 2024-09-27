@@ -1,25 +1,20 @@
 import { useState } from "react";
 import { Button, Col, Container, Offcanvas, Row } from "react-bootstrap"
-import { AiOutlineShopping } from "react-icons/ai";
-import { CiShoppingBasket } from "react-icons/ci";
-import { FaInstagram, FaRegComments, FaTelegram } from "react-icons/fa";
+import { AiOutlineShopping, AiOutlineSpotify } from "react-icons/ai";
+import { BsPatchQuestion } from "react-icons/bs";
+import { CiHome } from "react-icons/ci";
+import { FaChalkboardTeacher, FaInstagram, FaTelegram } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
-import { GoVideo } from "react-icons/go";
 import { GrBlog } from "react-icons/gr";
-import { HiOutlineNewspaper, HiUserGroup } from "react-icons/hi";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { LuContact } from "react-icons/lu";
 import { MdOutlineDarkMode } from "react-icons/md";
-import { PiContactlessPayment } from "react-icons/pi";
 import { SiAppstore } from "react-icons/si";
-import { VscPackage } from "react-icons/vsc";
 import { HashLink } from "react-router-hash-link"
-
 function Navbar(){
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [darkMode, setDarkMode] = useState()
+    const [darkMode, setDarkMode] = useState('')
     const ToggleHandler = ()=>{
         const Theme =  document.getElementById('theme')
         Theme.classList.toggle('dark')
@@ -28,8 +23,8 @@ function Navbar(){
         <header className="bg-gray-300 dark:bg-gray-950 dark:text-gray-300 py-2">
       <Container className="px-3 m-auto">
         <Row>
-          <Col xs={8} md={6} lg={10}>
-            <ul className="d-none gap-x-6 d-xl-flex items-center list-none p-0 h-[100%] ">
+          <Col xs={8} md={6} lg={8}>
+            <ul className="d-none gap-x-6 d-md-flex items-center list-none p-0 h-[100%] ">
              
               <li title="خانه">
                 <HashLink
@@ -37,7 +32,7 @@ function Navbar(){
                   className="no-underline text-dark relative group"
                 >
                   <span className="dark:text-gray-300">خانه</span>
-                  <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-[#8a2be2] group-hover:w-full"></span>
                 </HashLink>
               </li>
               <li title="دوره ها">
@@ -46,7 +41,7 @@ function Navbar(){
                   className="no-underline text-dark relative group "
                 >
                   <span className="dark:text-gray-300">دوره ها</span>
-                  <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-[#8a2be2] group-hover:w-full"></span>
                 </HashLink>
               </li>
               <li title="پادکست">
@@ -55,7 +50,7 @@ function Navbar(){
                   className="no-underline text-dark relative group"
                 >
                   <span className="dark:text-gray-300">پادکست</span>
-                  <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-[#8a2be2] group-hover:w-full"></span>
                 </HashLink>
               </li>
               <li title="سوال شما">
@@ -64,7 +59,7 @@ function Navbar(){
                   className="no-underline text-dark relative group"
                 >
                   <span className="dark:text-gray-300">سوال شما</span>
-                  <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-[#8a2be2] group-hover:w-full"></span>
                 </HashLink>
               </li>
               <li title="بلاگ">
@@ -73,12 +68,12 @@ function Navbar(){
                   className="no-underline text-dark relative group"
                 >
                   <span className="dark:text-gray-300">بلاگ</span>
-                  <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-[#8a2be2] group-hover:w-full"></span>
                 </HashLink>
               </li>
             </ul>
             <Button
-              className="d-flex d-xl-none items-center gap-x-1"
+              className="d-flex d-md-none items-center mt-1 gap-x-1"
               variant=""
               title="ورود |ثبت نام"
               onClick={handleShow}
@@ -123,7 +118,7 @@ function Navbar(){
                   <span className="dark:text-gray-300">
                     <SiAppstore size="25px" />
                   </span>
-                  <span className="dark:text-gray-300">Roobista</span>
+                  <span className="dark:text-gray-300">Baba Karam</span>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="p-0">
@@ -135,10 +130,10 @@ function Navbar(){
                       // onClick={() => setShow(false)}
                     >
                       <span className="dark:text-gray-300">
-                        <VscPackage size="20px" />
+                        <CiHome size="20px" />
                       </span>
-                      <span className="dark:text-gray-300">پکیج ها</span>
-                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                      <span className="dark:text-gray-300">خانه</span>
+                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-[#8a2be2] group-hover:w-full"></span>
                     </HashLink>
                   </li>
                   <li className="my-4">
@@ -147,10 +142,10 @@ function Navbar(){
                       className="no-underline text-dark items-center gap-x-3 relative group inline-flex"
                     >
                       <span className="dark:text-gray-300">
-                        <PiContactlessPayment size="20px" />
+                        <FaChalkboardTeacher size="20px" />
                       </span>
-                      <span className="dark:text-gray-300">معرفی اپلیکیشن</span>
-                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                      <span className="dark:text-gray-300">دوره ها </span>
+                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-[#8a2be2] group-hover:w-full"></span>
                     </HashLink>
                   </li>
                   <li className="my-4">
@@ -159,10 +154,10 @@ function Navbar(){
                       className="no-underline text-dark items-center gap-x-3 relative group inline-flex"
                     >
                       <span className="dark:text-gray-300">
-                        <HiUserGroup size="20px" />
+                        <AiOutlineSpotify size="20px" />
                       </span>
-                      <span className="dark:text-gray-300">تیم ما</span>
-                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                      <span className="dark:text-gray-300">پادکست</span>
+                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-[#8a2be2] group-hover:w-full"></span>
                     </HashLink>
                   </li>
                   <li className="my-4">
@@ -171,10 +166,10 @@ function Navbar(){
                       className="no-underline text-dark  items-center gap-x-3 relative group inline-flex"
                     >
                       <span className="dark:text-gray-300">
-                        <HiOutlineNewspaper size="20px" />
+                        <BsPatchQuestion size="20px" />
                       </span>
-                      <span className="dark:text-gray-300">اخبار اپلیکیشن</span>
-                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                      <span className="dark:text-gray-300">سوال شما</span>
+                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-[#8a2be2] group-hover:w-full"></span>
                     </HashLink>
                   </li>
                   <li className="my-4">
@@ -186,45 +181,7 @@ function Navbar(){
                         <GrBlog size="20px" />
                       </span>
                       <span className="dark:text-gray-300">بلاگ</span>
-                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
-                    </HashLink>
-                  </li>
-                  <li className="my-4">
-                    <HashLink
-                      to="/#contact"
-                      className="no-underline text-dark items-center gap-x-3 relative group inline-flex"
-                    >
-                      <span className="dark:text-gray-300">
-                        <LuContact size="20px" />
-                      </span>
-                      <span className="dark:text-gray-300">تماس با ما</span>
-                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
-                    </HashLink>
-                  </li>
-                  <li className="my-4">
-                    <HashLink
-                      to="/#comments"
-                      className="no-underline text-dark items-center gap-x-3 relative group inline-flex"
-                    >
-                      <span className="dark:text-gray-300">
-                        <FaRegComments size="20px" />
-                      </span>
-                      <span className="dark:text-gray-300">نظرات</span>
-                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
-                    </HashLink>
-                  </li>
-                  <li className="my-4">
-                    <HashLink
-                      to="/edu-video"
-                      className="no-underline text-dark items-center gap-x-3 relative group inline-flex"
-                    >
-                      <span className="dark:text-gray-300">
-                        <GoVideo size="20px" />
-                      </span>
-                      <span className="dark:text-gray-300">
-                        ویدیو های آموزشی
-                      </span>
-                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                      <span className="absolute -bottom-1 right-0 w-0 transition-all h-0.5 bg-[#8a2be2] group-hover:w-full"></span>
                     </HashLink>
                   </li>
                 </ul>
@@ -277,8 +234,8 @@ function Navbar(){
               </Offcanvas.Body>
             </Offcanvas>
           </Col>
-          <Col xs={4} md={6} lg={2}>
-                <ul className="d-none gap-x-6 d-lg-flex items-center list-none p-0 h-[100%] mt-1">
+          <Col xs={4} md={6} lg={4}>
+                <ul className="gap-x-6 d-flex items-center justify-end list-none p-0 h-[100%]">
                     <p href="" onClick={ToggleHandler} className="no-underline text-gray-300">
                         <li>
                             <span><MdOutlineDarkMode  size={'30px'}/></span>
@@ -299,7 +256,7 @@ function Navbar(){
                         <span className="dark:text-gray-300">
                             ورود
                         </span>
-                        <span className="transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
+                        <span className="transition-all bg-indigo-600 group-hover:w-full"></span>
                         </p>
                     </li>
                     
