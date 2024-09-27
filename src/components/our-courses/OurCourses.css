@@ -1,0 +1,8 @@
+.our-courses::after{
+    content: "";
+    width: 100px;
+    height: 4px;
+    border-left: 150px double #8f17ff;
+    display: block;
+    margin: 10px auto 0 auto;
+}
