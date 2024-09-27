@@ -20,14 +20,14 @@ function SubHeader() {
             </h6>
             <div className="flex justify-start gap-x-4 mt-3 items-center select-none">
               <button
-                className="bg-[#8a2be2] rounded-lg px-4 py-2.5 hover:drop-shadow-custom"
+                className="bg-[#8a2be2] rounded-lg px-4 !py-2.5 hover:drop-shadow-custom"
                 title="ورود"
               >
                 ورود
               </button>
               <button
                 title="مشاهده همه دوره ها"
-                className="border border-[#8a2be2] bg-gray-800 hover:bg-[#8f17ff] drop-shadow-custom hover:border-0 transition delay-100 rounded-lg px-4 py-2.5"
+                className="border border-[#8a2be2] bg-gray-800 hover:c drop-shadow-custom hover:border-0 hover:bg-[#8a2be2] transition delay-100 rounded-lg px-4 !py-2.5"
               >
                 مشاهده همه دوره ها
               </button>

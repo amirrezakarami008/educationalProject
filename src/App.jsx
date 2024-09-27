@@ -1,12 +1,15 @@
+import { BrowserRouter, Routes } from "react-router-dom";
 import "./App.css";
-import OurCourses from "./components/our-courses/OurCourses";
-import SubHeader from "./components/sub-header/SubHeader";
+
+import { Route } from "react-router-dom";
+import Home from "./pages/home/Home";
 function App() {
   return (
-    <>
-      <SubHeader />
-      <OurCourses />
-    </>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element = {<Home />} />
+        </Routes>
+    </BrowserRouter>
   );
 }
 
